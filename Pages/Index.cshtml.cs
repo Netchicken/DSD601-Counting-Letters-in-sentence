@@ -6,7 +6,9 @@ namespace DSD601_Counting_Letters_in_sentence.Pages
     [BindProperties]
     public class IndexModel : PageModel
     {
+        //text field to hold words
         public string Text { get; set; }
+        //list to hold letters
         public List<string> LetterCount { get; set; }
 
         public IndexModel()
