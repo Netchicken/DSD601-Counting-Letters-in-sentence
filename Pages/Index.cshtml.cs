@@ -29,7 +29,10 @@ namespace DSD601_Counting_Letters_in_sentence.Pages
 
         private void CountLetters(string text)
         {
-            var Letters = new Dictionary<char, int>();
+           var Letters = new Dictionary<char, int>();
+
+         //   var Letters = new SortedDictionary<char, int>();
+
 
             //if there is no text use the sentance 
             if (string.IsNullOrEmpty(text))
