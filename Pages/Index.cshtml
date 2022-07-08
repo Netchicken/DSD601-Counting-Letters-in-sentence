@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="card" style=" margin-top: 20px">
+    <div class="card-header">
+        <h1>Letter Counter</h1>
+
+        
+    </div>
+    <div class="card-body">
+        <h4>Type in a sentance and see how many letters there are</h4>
+
+        <form method="post">
+            <div class="form-group">
+                <div class="row">
+                    <label asp-for="Text" class="col-lg-2"></label>
+                    <input type="text" asp-for="Text" class="col-lg-2" />
+                </div>
+
+                <div class="row">
+                    <input type="submit" value="Submit" asp-action="Index" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <h3>Result</h3>
+
+        <div class="row">
+           
+            <ul>
+
+                @foreach (var item in Model.LetterCount)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+
+        </div>
+    </div>
+</div>
